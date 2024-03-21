@@ -77,7 +77,7 @@ function UserReview({ review, index, reviews, loggedIn }) {
       }
 
       const response = await axios.put(
-        `http://localhost:3001/reviews/${review._id}/like`,
+        `https://reviewforport.onrender.com/reviews/${review._id}/like`,
         {
           liked: !liked,
         }
@@ -100,7 +100,7 @@ function UserReview({ review, index, reviews, loggedIn }) {
     ];
 
     axios
-      .put(`http://localhost:3001/reviews/${review._id}/report`, {
+      .put(`https://reviewforport.onrender.com/reviews/${review._id}/report`, {
         inputValueReport: updatedInputValueReport,
       })
       .then(() => {
@@ -163,7 +163,7 @@ function UserReview({ review, index, reviews, loggedIn }) {
                 <div className="block__3_like_text">{likeCount}</div>
               </div>
             ) : (
-              <a href="http://localhost:3001/auth/google">
+              <a href="https://reviewforport.onrender.com/auth/google">
                 <div className="block__3_likes block__3_icons">
                   <LikeImg
                     width="15px"
@@ -199,7 +199,7 @@ function UserReview({ review, index, reviews, loggedIn }) {
                 onClick={reportClick}
               />
             ) : (
-              <a href="http://localhost:3001/auth/google">
+              <a href="https://reviewforport.onrender.com/auth/google">
                 <img
                   src={flagReport}
                   alt=""

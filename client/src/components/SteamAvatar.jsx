@@ -6,7 +6,7 @@ function SteamAvatar({ ellipseColor }) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/user", {
+      .get("https://reviewforport.onrender.com/user", {
         withCredentials: true,
       })
       .then((response) => {

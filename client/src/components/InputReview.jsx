@@ -9,7 +9,7 @@ const InputReview = ({ updateErrorSavingUserReview, selectedStars }) => {
   const [ID, setID] = useState("");
   useEffect(() => {
     axios
-      .get("http://localhost:3001/user", {
+      .get("https://reviewforport.onrender.com/user", {
         withCredentials: true,
       })
       .then((response) => {
@@ -37,7 +37,7 @@ const InputReview = ({ updateErrorSavingUserReview, selectedStars }) => {
 
   const saveInputValue = () => {
     axios
-      .post("http://localhost:3001/api/save-input-review", {
+      .post("https://reviewforport.onrender.com/api/save-input-review", {
         inputValue,
         selectedStars,
         avatar: avatarUrl,

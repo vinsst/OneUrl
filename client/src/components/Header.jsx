@@ -12,7 +12,7 @@ function Header() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/user", {
+      .get("https://reviewforport.onrender.com/user", {
         withCredentials: true,
       })
       .then((response) => {
@@ -51,7 +51,7 @@ function Header() {
               <SteamAvatar ellipseColor="ellipseAvatarBack_blue" />
             ) : (
               <a
-                href="http://localhost:3001/auth/google"
+                href="https://reviewforport.onrender.com/auth/google"
                 className="header__element img2"
               >
                 <div className="sign">

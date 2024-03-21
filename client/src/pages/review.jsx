@@ -27,7 +27,7 @@ function Review() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/user", {
+      .get("https://reviewforport.onrender.com/user", {
         withCredentials: true,
       })
       .then((response) => {
@@ -55,7 +55,7 @@ function Review() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/api/get-all-reviews`)
+      .get(`https://reviewforport.onrender.com/api/get-all-reviews`)
       .then((response) => {
         setReviews(response.data);
       })
@@ -151,7 +151,7 @@ function Review() {
                         Write a review
                       </span>
                     ) : (
-                      <a href="http://localhost:3001/auth/google">
+                      <a href="https://reviewforport.onrender.com/auth/google">
                         <span className="block__1_personal_text">
                           Write a review
                         </span>
@@ -192,7 +192,7 @@ function Review() {
                             />
                           </li>
                         ) : (
-                          <a href="http://localhost:3001/auth/google">
+                          <a href="https://reviewforport.onrender.com/auth/google">
                             <li
                               onMouseEnter={() => {
                                 if (!handleIfClickedStars) {

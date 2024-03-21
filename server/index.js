@@ -86,7 +86,7 @@ printDirectoryStructure(projectRootPath);
 app.use(passport.initialize());
 app.use(passport.session());
 
-// app.use(express.static(path.join(dir_rootApp, "/client/build")));
+app.use(express.static(path.join(dir_rootApp, "/client/build")));
 
 console.log(path.join(dir_rootApp, "/client/build"));
 console.log(__dirname);

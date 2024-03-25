@@ -111,7 +111,9 @@ function Review() {
                   Try this functionality right now!
                 </span>
               </div>
-              <img src={devBTN} alt="" height="70px" className="devBTN" />
+              <a href="mailto:forpc822946@gmail.com">
+                <img src={devBTN} alt="" height="70px" className="devBTN" />
+              </a>
             </div>
             <img
               src={starObjects}
@@ -129,7 +131,7 @@ function Review() {
             <div className="block__1_content block_content">
               <div className="block__1_personal">
                 {loggedIn ? (
-                  <SteamAvatar ellipseColor="ellipseAvatarBack_pink" />
+                  <SteamAvatar ellipseColor="ellipseAvatarBack_pink block__1_avatar" />
                 ) : (
                   <></>
                 )}

@@ -8,7 +8,6 @@ function Star({ yellow }) {
     >
       <StarGray
         className={yellow ? "block__1_stars_star_yellow" : ""}
-        // className="block__1_stars_star"
         width="36px"
         height="36px"
       />

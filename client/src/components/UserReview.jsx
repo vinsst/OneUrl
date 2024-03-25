@@ -28,8 +28,6 @@ function UserReview({ review, index, reviews, loggedIn }) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // Перевірка, чи відгук вже був лайкнутий користувачем
-    // лайк 1 раз від 1 корист
     const likedReviews = localStorage.getItem("likedReviews");
     if (likedReviews) {
       const parsedLikedReviews = JSON.parse(likedReviews);
@@ -60,7 +58,6 @@ function UserReview({ review, index, reviews, loggedIn }) {
       setLiked(!liked);
       setLikeCount(updatedLikeCount);
 
-      // Update localStorage for liked reviews
       const likedReviews = localStorage.getItem("likedReviews");
       if (likedReviews) {
         const parsedLikedReviews = JSON.parse(likedReviews);
@@ -174,19 +171,6 @@ function UserReview({ review, index, reviews, loggedIn }) {
                 </div>
               </a>
             )}
-            {/* <div
-              className="block__3_comments block__3_icons"
-              // onClick={() => updateShowComments()}
-            >
-              <img
-                src={chat}
-                alt=""
-                width="15px"
-                height="15px"
-                className="block__3_icon"
-              />
-              <div className="block__3_comment_text">Comment {`(0)`}</div>
-            </div> */}
           </div>
           <div className="block__3_flag block__3_icons">
             {loggedIn ? (

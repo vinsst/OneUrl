@@ -166,7 +166,7 @@ body {
 /*---------------------*/
 body {
   font-family: "Montserrat";
-  background-color: #f8c7c8; /* For browsers that do not support gradients */
+  background-color: #f8c7c8;
   background-image: linear-gradient(
     135deg,
     #f8c7c8,
@@ -192,24 +192,6 @@ body {
     margin-top: 90px;
   }
 }
-
-/* @media (min-width: 1380px){
-    .main .games {
-    margin-bottom: 120px;
-    }
-}
-
-@media (min-width: 1600px){
-    .main .games {
-    margin-bottom: 240px;
-    }
-}
-
-@media (min-width: 1900px){
-    .main .games {
-    margin-bottom: 400px;
-    }
-} */
 
 .wrapper {
   min-height: 100%;
@@ -415,27 +397,6 @@ body {
   background-color: #fff;
   color: #8468f5;
 }
-
-// @media (min-width: 1900px) {
-//   .sign {
-//     width: calc(117px * 1.1);
-//     height: calc(117px * 1.1);
-//   }
-// }
-
-// @media (min-width: 2500px) {
-//   .sign {
-//     width: calc(117px * 1.3);
-//     height: calc(117px * 1.3);
-//   }
-// }
-
-// @media (min-width: 3800px) {
-//   .sign {
-//     width: calc(117px * 1.6);
-//     height: calc(117px * 1.6);
-//   }
-// }
 
 /* ----review---- */
 .reviewPage {
@@ -1118,7 +1079,7 @@ body {
 }
 
 .steamAvatar {
-  mask-image: url(assets/img/circleMask.svg); /* Шлях до SVG-файлу з обсічною маскою */
+  mask-image: url(assets/img/circleMask.svg);
   mask-size: cover;
   mask-repeat: no-repeat;
   height: 50px;
@@ -1221,7 +1182,7 @@ body {
   border: 1px solid #2d2f49;
   border-radius: 5px;
   padding: 10px;
-  resize: none; /* Дозволяє змінювати висоту вертикально */
+  resize: none;
   transition: border-color 0.3s ease;
 }
 

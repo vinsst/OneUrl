@@ -44,8 +44,6 @@ const InputReview = ({ updateErrorSavingUserReview, selectedStars }) => {
         nickname,
         ID,
       })
-      // if want to connect file to review.jsx
-      // .post("/api/save-input-review", { inputValue, selectedStars })
       .then(() => {
         console.log("Value saved successfully");
         setErrorSavingUserReview(false);

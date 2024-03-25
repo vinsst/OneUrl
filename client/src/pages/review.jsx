@@ -131,7 +131,9 @@ function Review() {
             <div className="block__1_content block_content">
               <div className="block__1_personal">
                 {loggedIn ? (
-                  <SteamAvatar ellipseColor="ellipseAvatarBack_pink block__1_avatar" />
+                  <div className="block__1_avatar">
+                    <SteamAvatar ellipseColor="ellipseAvatarBack_pink" />
+                  </div>
                 ) : (
                   <></>
                 )}
@@ -227,22 +229,6 @@ function Review() {
               <h3 className="block__2_h3">
                 <span>Sort reviews</span>
               </h3>
-              {/* <div className="block__2_starLines">
-                <div
-                  className={
-                    sidebar
-                      ? "block__2_starLines_cell_hovered"
-                      : "block__2_starLines_cell"
-                  }
-                  onMouseEnter={showSidebar}
-                  onMouseLeave={showSidebar}
-                ></div>
-                <div className="block__2_starLines_starNumber">5 star</div>
-                <div className="block__2_starLines_line">
-                  <div className="block__2_starLines_line_2_1"></div>
-                </div>
-                <span className="block__2_starLines_rate">94%</span>
-              </div> */}
               {[1, 2, 3, 4, 5].map((index) => {
                 const widthValue = perCentReview(6 - index) + "%";
                 return (
@@ -270,7 +256,7 @@ function Review() {
           </div>
           {reviews.map((review, index) => {
             if (showReviewsWithRating && review.selectedStars !== rating) {
-              return null; // Приховати відгуки з іншим рейтингом
+              return null;
             }
             return (
               <UserReview
@@ -278,7 +264,6 @@ function Review() {
                 index={index}
                 reviews={reviews}
                 loggedIn={loggedIn}
-                // updateShowComments={handleCommentClick}
               />
             );
           })}

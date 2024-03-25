@@ -38,8 +38,6 @@ passport.use(
       callbackURL: process.env.callbackURL,
     },
     (accessToken, refreshToken, profile, done) => {
-      // You can customize how user information is stored in your database
-      // For now, we'll just return the user profile
       return done(null, profile);
     }
   )

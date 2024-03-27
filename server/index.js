@@ -45,7 +45,7 @@ passport.use(
 
 app.use(
   session({
-    secret: "keyboard cat",
+    secret: process.env.sessionSecret,
     resave: false,
     saveUninitialized: false,
   })

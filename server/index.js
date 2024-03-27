@@ -79,7 +79,7 @@ function printDirectoryStructure(directoryPath, indent = "") {
 (function () {
   setInterval(function () {
     console.log("server is live");
-  }, 10000);
+  }, 20000);
 })();
 
 const projectRootPath = dir_rootApp;

@@ -1193,3 +1193,22 @@ body {
     z-index: -1012190;
   }
 }
+
+.policyPage-title {
+  margin: 100px 0 25px 0;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #1d1c24;
+  font-size: 36px;
+  text-wrap: wrap;
+}
+
+.policyPage__text_content {
+  padding: 0px 15px;
+  margin: 0px auto;
+}
+
+.policyPage_container {
+  max-width: 1000px;
+  margin: 0 auto;
+}

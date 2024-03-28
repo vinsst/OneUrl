@@ -41,12 +41,15 @@ function Header() {
             <Link to="/" className="header__element header__text">
               Home
             </Link>
-            <Link to="/whyWe" className="header__element header__text whyWe">
-              Other projects
+            <Link to="/policy" className="header__element header__text whyWe">
+              privacy policy
             </Link>
-            <Link to="/commission" className="header__element header__text">
+            <a
+              href="mailto:forpc822946@gmail.com"
+              className="header__element header__text"
+            >
               Support
-            </Link>
+            </a>
             {loggedIn ? (
               <SteamAvatar ellipseColor="ellipseAvatarBack_blue" />
             ) : (

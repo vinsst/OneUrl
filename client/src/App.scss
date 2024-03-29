@@ -244,6 +244,7 @@ body {
 /* ---------------------------------------------- */
 
 .header {
+  position: relative;
   height: 150px;
   display: flex;
   flex-direction: row;
@@ -1211,4 +1212,130 @@ body {
 .policyPage_container {
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.header_center {
+  top: 50%;
+  left: 50%;
+  cursor: pointer;
+}
+
+.header__center_burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  z-index: 999;
+}
+
+.header__center_burger_line {
+  background: #8468f5;
+  height: 3.5px;
+  width: 25px;
+  border-radius: 2px;
+}
+
+@media (min-width: 770px) {
+  .header__center_burger {
+    position: absolute;
+    z-index: -10;
+    visibility: hidden;
+  }
+}
+
+.burger__menu_hide {
+  top: 0;
+  left: 0;
+  z-index: -1000;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #000000;
+  opacity: 95%;
+  visibility: hidden;
+}
+
+.burger__menu_show {
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #f8c7c8; /* For browsers that do not support gradients */
+  background-image: linear-gradient(
+    135deg,
+    #f8c7c8,
+    #f8c7c8,
+    #ffb2b4,
+    #f8c7c8,
+    #dc939c
+  );
+  opacity: 96%;
+  animation-name: burger__menu_animation;
+  animation-duration: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger__menu_show_content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 20%;
+  justify-content: space-between;
+}
+
+.header_centerClicked {
+  left: 50%;
+  z-index: 10000;
+}
+
+@keyframes burger__menu_animation {
+  0% {
+    top: -1000;
+    height: 10%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+// @keyframes burger__menu_animation_hide {
+//   0% {
+//     visibility: visible;
+//     z-index: 1000;
+//   }
+//   99% {
+//     z-index: 1000;
+//   }
+//   100% {
+//     top: -10000;
+//     height: 10%;
+//     visibility: hidden;
+//   }
+// }
+@media (min-width: 770px) {
+  .burger__menu_show {
+    position: absolute;
+    z-index: -10;
+    visibility: hidden;
+  }
+}
+
+.burger__menu_element {
+  color: #fff;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+.burger__menu_element_container {
+  display: flex;
+  align-items: center;
 }

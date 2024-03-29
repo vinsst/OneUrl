@@ -5,10 +5,16 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 import logo from "../assets/img/logoR.svg";
+import support from "../assets/img/support.svg";
+import home from "../assets/img/home.svg";
+import insurance from "../assets/img/insurance.svg";
 import SteamAvatar from "./SteamAvatar";
 
 function Header() {
   const [loggedIn, setLoggedIn] = useState(false);
+  const [sidebar, setSidebar] = useState(false);
+
+  const showSidebar = () => setSidebar(!sidebar);
 
   useEffect(() => {
     axios
@@ -36,6 +42,18 @@ function Header() {
                 className="img1"
               />
             </Link>
+          </div>
+          <div
+            className={
+              sidebar ? "header_center header_centerClicked" : "header_center"
+            }
+            onClick={showSidebar}
+          >
+            <div className="header__center_burger">
+              <div className="header__center_burger_line"></div>
+              <div className="header__center_burger_line"></div>
+              <div className="header__center_burger_line"></div>
+            </div>
           </div>
           <div className="header_rightSide">
             <Link to="/" className="header__element header__text">
@@ -65,6 +83,40 @@ function Header() {
           </div>
         </div>
       </header>
+      <div className={sidebar ? "burger__menu_show" : "burger__menu_hide"}>
+        <div className="burger__menu_show_content">
+          <div className="burger__menu_element_container">
+            <img src={home} alt="" height="20px" width="20px" />
+            <Link
+              to="/"
+              className="burger__menu_element burger__menu_element_1"
+              onClick={showSidebar}
+            >
+              Home
+            </Link>
+          </div>
+          <div className="burger__menu_element_container">
+            <img src={insurance} alt="" height="20px" width="20px" />
+            <Link
+              to="/policy"
+              className="burger__menu_element burger__menu_element_2"
+              onClick={showSidebar}
+            >
+              privacy policy
+            </Link>
+          </div>
+          <div className="burger__menu_element_container">
+            <img src={support} alt="" height="20px" width="20px" />
+            <a
+              href="mailto:forpc822946@gmail.com"
+              className="burger__menu_element burger__menu_element_3"
+              onClick={showSidebar}
+            >
+              Support
+            </a>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

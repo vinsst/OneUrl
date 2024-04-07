@@ -93,19 +93,10 @@ function keepServerAlive() {
     .catch((err) => console.error("Error keeping server alive:", err));
 }
 
-// Маршрут, який буде відправляти відповідь "pong" для тримання сервера активним
 app.get("/keep-alive", (req, res) => {
   res.send("pong");
 });
 
-// Решта вашого коду тут...
-
-// Запуск сервера
-app.listen(port, () => {
-  console.log("Listening, port " + port);
-});
-
-// Виклик функції для тримання сервера активним кожні 10 хвилин (600000 мс)
 setInterval(keepServerAlive, 300000);
 
 app.use(passport.initialize());
